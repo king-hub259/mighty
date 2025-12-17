@@ -12,14 +12,14 @@ extension StringExtension on String {
 }
 class AppConstants {
   static const bool demo = false;
-  static const String appName = 'Mighty School';
+  static const String appName = 'Edubest';
   static const String slogan = 'Empowering Schools. Empowering Futures.';
   static const String instituteDomain = 'institute1.com';
   static const String version = '3.1';   /// Flutter SDK 3.35.2
   static const int versionCode = 3;
   static const String currency = "USD";
   static const String chatGptApiKey = 'your ApiKey';
-  static const String baseUrl = 'https://dev-api.codenichebd.com';
+  static const String baseUrl = 'https://wa.edubest.com.ng';
   static const String imageBaseUrl = '$baseUrl/public/storage';
   static const String loginUri = '/api/login';
   static const String branches = '/api/branches';
