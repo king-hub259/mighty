@@ -1,0 +1,20 @@
+{
+    "Academic": true,
+    "Authentication": true,
+    "Examination": true,
+    "Library": true,
+    "SystemConfiguration": true,
+    "Accounting": true,
+    "Finance": true,
+    "LayoutCert": true,
+    "SMS": true,
+    "Quiz": true,
+    "Student": true,
+    "Teacher": true,
+    "Payroll": true,
+    "Frontend": true,
+    "Gateways": true,
+    "Hostel": true,
+    "Transport": true,
+    "ParentModule": true
+}
