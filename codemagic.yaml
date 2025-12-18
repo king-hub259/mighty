@@ -10,7 +10,9 @@ workflows:
         - google_credentials  # optional, if you add Play Store keys later
       vars:
         PACKAGE_NAME: "com.m3pay.app"  # change this to your real package name
+
     scripts:
+      # ---------------- ANDROID (UNCHANGED) ----------------
       - name: Get Flutter dependencies
         script: |
           flutter clean
@@ -32,17 +34,50 @@ workflows:
             --obfuscate \
             --split-debug-info=build/debug-info
 
+      # ---------------- iOS ----------------
+      - name: Build iOS (no codesign)
+        script: |
+          flutter build ios \
+            --release \
+            --no-codesign \
+            --obfuscate \
+            --split-debug-info=build/debug-info
+
+      # ---------------- WEB ----------------
+      - name: Build Web
+        script: |
+          flutter build web \
+            --release \
+            --web-renderer html
+
+      # ---------------- WINDOWS ----------------
+      - name: Build Windows
+        script: |
+          flutter build windows \
+            --release
+
     artifacts:
+      # ---------------- ANDROID ----------------
       - build/app/outputs/flutter-apk/app-armeabi-v7a-release.apk
       - build/app/outputs/flutter-apk/app-arm64-v8a-release.apk
       - build/app/outputs/flutter-apk/app-x86_64-release.apk
       - build/app/outputs/bundle/release/app-release.aab
+
+      # ---------------- iOS ----------------
+      - build/ios/iphoneos/Runner.app
+
+      # ---------------- WEB ----------------
+      - build/web/**
+
+      # ---------------- WINDOWS ----------------
+      - build/windows/runner/Release/**
+
       - flutter_drive.log
 
     publishing:
       email:
         recipients:
-          - michealige080@gmail.com   # change to your email
+          - michealige080@gmail.com
         notify:
           success: true
           failure: true
