@@ -19,7 +19,7 @@ class AppConstants {
   static const int versionCode = 3;
   static const String currency = "USD";
   static const String chatGptApiKey = 'your ApiKey';
-  static const String baseUrl = 'https://wa.edubest.com.ng';
+  static const String baseUrl = 'https://edubest.com.ng';
   static const String imageBaseUrl = '$baseUrl/public/storage';
   static const String loginUri = '/api/login';
   static const String branches = '/api/branches';
