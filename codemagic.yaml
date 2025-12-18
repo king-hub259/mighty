@@ -45,10 +45,8 @@ workflows:
 
       # ---------------- WEB ----------------
       - name: Build Web
-        script: |
-          flutter build web \
-            --release \
-            --web-renderer html
+  script: |
+    flutter build web --release
 
       # ---------------- WINDOWS ----------------
       - name: Build Windows
